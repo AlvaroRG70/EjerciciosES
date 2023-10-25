@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Biblioteca</title>
+    </head>
+    <body>
+        {% for tarea in tareas_mostrar %}
+            <div>
+                <h2>Título: {{tarea.titulo}}</h2>
+                <h2>Descripcion: {{tarea.descripcion}}</h2>
+                <h2>Prioridad: {{tarea.prioridad}}</h2>
+                <h2>Estado: {{tarea.estadio}}</h2>
+                <h2>Completada: {{tarea.completada}}</h2>
+                <h2>Fecha Creacion: {{tarea.fecha_creacion}}</h2>
+                <h2>Hora vencimiento: {{tarea.hora_vencimiento}}</h2>
+
+                <h2>Usuarios</h2>
+                <ul>
+                    {% for usuario in tarea.usuario.all%}
+                        <li>{{usuario.nombre}}</li>
+                    {%endfor%}
+                </ul>
+                
+            </div>
+        
+        {% endfor %}
+
+    </body>
+
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Biblioteca</title>
+    </head>
+    <body>
+        {% for completados in dame_proyectos_completados %}
+            <div>
+                <h2>titulo: {{completados.titulo}}</h2>
+                <h2>Descripcion: {{completados.descripcion}}</h2>
+                <h2>fecha_creacion: {{completados.fecha_creacion}}</h2>
+                <h2>Estado: {{completados.estadio}}</h2>
+            </div>
+        
+        {% endfor %}
+
+    </body>
+
+
+</html>

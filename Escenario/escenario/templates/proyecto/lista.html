@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Biblioteca</title>
+    </head>
+    <body>
+        <h1>Proyectos</h1>
+        {% for proyecto in lista_proyectos %}
+            <div>
+                <h2>Nombre: {{proyecto.nombre}}</h2>
+                <h2>Descripcion: {{proyecto.descripcion}}</h2>
+                <h2>Duracion estimada: {{proyecto.duracion_estimada}}</h2>
+                <h2>Fecha inicio: {{proyecto.fecha_inicio}}</h2>
+                <h2>Fecha fin: {{proyecto.fecha_fin}}</h2>
+
+                <h2>Usuarios</h2>
+                <ul>
+                    {% for usuario in proyecto.usuarios.all%}
+                        <li>{{usuario.nombre}}</li>
+                    {%endfor%}
+                </ul>
+                
+            </div>
+        
+        {% endfor %}
+
+    </body>
+
+
+</html>

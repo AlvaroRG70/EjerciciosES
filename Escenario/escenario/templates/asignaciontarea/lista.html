@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>escenario</title>
+    </head>
+    <body>
+        {% for tarea in tarea_fecha %}
+            <div>
+                <h2>Observaciones: {{tarea.observaciones}}</h2>
+                <h2>fecha publicacion: {{tarea.fecha_asignacion}}</h2>
+                
+                <h2>Usuarios</h2>
+                <ul>
+                    {% for usuario in proyecto.usuarios.all%}
+                        <li>{{usuario.nombre}}</li>
+                    {%endfor%}
+                </ul>
+                
+            </div>
+        
+        {% endfor %}
+
+    </body>
+
+
+</html>

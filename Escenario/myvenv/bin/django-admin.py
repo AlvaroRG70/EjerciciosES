@@ -1,4 +1,4 @@
-#!/home/alumnado/Escritorio/2DAW/ES/Django/EjerciciosES/Escenario/myvenv/bin/python
+#!/home/alumnado/Escritorio/2DAW_NUEVA/Servidor/Django/EjerciciosES/Escenario/myvenv/bin/python3
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
