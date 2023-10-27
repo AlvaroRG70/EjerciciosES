@@ -1,0 +1,19 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Biblioteca</title>
+    </head>
+    <body>
+        {% for comentarios in comentarios_anyo %}
+            <div>
+                <h2>autor: {{comentarios.autor.nombre}}</h2>
+                <h2>contenido: {{comentarios.contenido}}</h2>
+                <h2>fecha comentario: {{comentarios.fecha_comentario}}</h2>
+
+            </div>
+        {% endfor %}
+        
+    </body>
+
+
+</html>

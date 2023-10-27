@@ -1,0 +1,19 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Biblioteca</title>
+    </head>
+    <body>
+        {% for etiqueta in etiqueta_tarea %}
+            <div>
+                <h2>Tarea: {{etiqueta.tarea}}</h2>
+                <h2>Etiqueta: {{etiqueta.etiqueta}}</h2>
+                <p>-----------------------------------------------</p>
+            </div>
+        
+        {% endfor %}
+
+    </body>
+
+
+</html>

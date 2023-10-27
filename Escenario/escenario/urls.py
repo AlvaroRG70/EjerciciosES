@@ -9,4 +9,7 @@ urlpatterns = [
     path("escenario/tarea/<str:texto_obs>", views.dame_tareas, name = "dame_tareas_escenario"),
     path("proyectos/listar/<int:anyo1>/<int:anyo2>", views.proyectos_completados, name = "dame_proyectos_completados"),
     path("ult-usuario", views.dame_ultimo_usuario, name="ultimo_usuario"),
+    path("tareas/comentarios/<str:palabra>/<int:anyo>", views.dame_comentarios, name="comentarios_anyo"),
+    path("tareas/etiquetas", views.etiquetas_tareas, name="etiqueta_tarea"),
+    path("usuarios/no_tarea", views.usuario_sin_tarea, name="usuario_sin")
 ]

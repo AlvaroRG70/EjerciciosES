@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from escenario.models import Proyecto, Tarea, AsignacionTarea,Comentario
+from escenario.models import Proyecto, Tarea, AsignacionTarea,Comentario, EtiquetaAsociada, Usuario
 
 # Create your views here.
 def index(request):
@@ -30,3 +30,28 @@ def proyectos_completados(request, anyo1, anyo2):
 def dame_ultimo_usuario(request):
     usuarios = Comentario.objects.order_by("-fecha_comentario")[:1].get()
     return render(request, "comentario/comentario.html",{"ultimo_usuario":usuarios})
+
+def dame_comentarios(request, palabra, anyo):
+    comentarios = Comentario.objects.filter(contenido__contains=palabra).filter(fecha_comentario__year=anyo)
+    return render(request, "comentario/coment_fecha.html", {"comentarios_anyo":comentarios})
+
+
+def etiquetas_tareas(request):
+    etiquetas = EtiquetaAsociada.objects.all()
+    return render(request, "tarea/etiqueta.html", {"etiqueta_tarea":etiquetas})
+
+def usuario_sin_tarea(request):
+    usuarios = Usuario.objects.filter(asignaciontarea=None).all()
+    return render(request, "usuario/usuario_sin.html", {"usuario_sin":usuarios})
+
+def mi_error_404(request, exception=None):
+    return render(request, "errores/404.html",None,None,404)
+
+def mi_error_400(request, exception=None):
+    return render(request, "errores/400.html",None,None,400)
+
+def mi_error_403(request, exception=None):
+    return render(request, "errores/403.html",None,None,403)
+
+def mi_error_500(request, exception=None):
+    return render(request, "errores/500.html",None,None,500)
