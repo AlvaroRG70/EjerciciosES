@@ -1,13 +1,13 @@
 <!DOCTYPE>
 <html>
     <head>
-        <title>Biblioteca</title>
+        <title>etiquetas por tarea</title>
     </head>
     <body>
         {% for etiqueta in etiqueta_tarea %}
             <div>
-                <h2>Tarea: {{etiqueta.tarea}}</h2>
-                <h2>Etiqueta: {{etiqueta.etiqueta}}</h2>
+                <h2>Tarea: {{etiqueta.tarea.titulo}}</h2>
+                <h2>Etiqueta: {{etiqueta.etiqueta.nombre}}</h2>
                 <p>-----------------------------------------------</p>
             </div>
         
