@@ -1,9 +1,10 @@
-<!DOCTYPE>
-<html>
-    <head>
-        <title>Biblioteca</title>
-    </head>
-    <body>
+{% extends "principal.html" %}
+
+{% block cabecera %}
+    <br><h2 class="cabecera">Esto son proyectos por fecha</h2><br>
+{% endblock cabecera %}
+
+{%block contenido%}
         {% for completados in dame_proyectos_completados %}
             <div>
                 <h2>titulo: {{completados.titulo}}</h2>
@@ -13,8 +14,4 @@
             </div>
         
         {% endfor %}
-
-    </body>
-
-
-</html>
+{%endblock%}

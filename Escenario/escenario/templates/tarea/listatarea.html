@@ -1,9 +1,10 @@
-<!DOCTYPE>
-<html>
-    <head>
-        <title>Biblioteca</title>
-    </head>
-    <body>
+{% extends "principal.html" %}
+
+{% block cabecera %}
+    <br><h2 class="cabecera">Esto es Lista de tareas</h2><br>
+{% endblock cabecera %}
+
+{%block contenido%}
         {% for tarea in tareas_mostrar %}
             <div>
                 <h2>Título: {{tarea.titulo}}</h2>
@@ -24,8 +25,4 @@
             </div>
         
         {% endfor %}
-
-    </body>
-
-
-</html>
+{%endblock%}

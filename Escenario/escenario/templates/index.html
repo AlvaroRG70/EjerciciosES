@@ -1,12 +1,8 @@
+{% extends "principal.html" %}
 
-        <ul>
-            <li><a href="{% url 'lista_proyectos' %}">Proyectos</a></li>
-            <li><a href="{% url 'lista_tareas' %}">Tareas</a></li>
-            <li><a href="{% url 'usuario_lista_tarea' %}">usuarios ordenador por fecha</a></li>
-            <li><a href="{% url 'dame_tareas_escenario' 'Medical' %}">tareas con texto en concreto</a></li>
-            <li><a href="{% url 'dame_proyectos_completados' 1973 1995 %}">tareas entre 2 fechas y completadas</a></li>
-            <li><a href="{% url 'ultimo_usuario' %}">ultimo cliente en comentar</a></li>
-            <li><a href="{% url 'comentarios_anyo' 'process' 2020 %}">Comentarios por cadena y año</a></li>
-            <li><a href="{% url 'etiqueta_tarea' %}">Etiqueras usadas en las tareas</a></li>
-            <li><a href="{% url 'usuario_sin' %}">Usuarios sin tareas</a></li>
-        </ul>
+{% block cabecera %}
+Cabecera aca
+{% endblock cabecera %}
+{%block contenido%}
+Este es el index
+{%endblock%}

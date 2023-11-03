@@ -1,9 +1,10 @@
-<!DOCTYPE>
-<html>
-    <head>
-        <title>Biblioteca</title>
-    </head>
-    <body>
+{% extends "principal.html" %}
+
+{% block cabecera %}
+    <br><h2 class="cabecera">Esto es Comentario por fecha</h2><br>
+{% endblock cabecera %}
+
+{%block contenido%}
         {% for comentarios in comentarios_anyo %}
             <div>
                 <h2>autor: {{comentarios.autor.nombre}}</h2>
@@ -12,8 +13,4 @@
 
             </div>
         {% endfor %}
-        
-    </body>
-
-
-</html>
+{%endblock%}

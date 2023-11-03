@@ -1,9 +1,10 @@
-<!DOCTYPE>
-<html>
-    <head>
-        <title>etiquetas por tarea</title>
-    </head>
-    <body>
+{% extends "principal.html" %}
+
+{% block cabecera %}
+    <br><h2 class="cabecera">Esto es Etiquetas</h2><br>
+{% endblock cabecera %}
+
+{%block contenido%}
         {% for etiqueta in etiqueta_tarea %}
             <div>
                 <h2>Tarea: {{etiqueta.tarea.titulo}}</h2>
@@ -12,8 +13,4 @@
             </div>
         
         {% endfor %}
-
-    </body>
-
-
-</html>
+{%endblock%}

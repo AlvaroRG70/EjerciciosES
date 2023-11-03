@@ -1,9 +1,10 @@
-<!DOCTYPE>
-<html>
-    <head>
-        <title>Biblioteca</title>
-    </head>
-    <body>
+{% extends "principal.html" %}
+
+{% block cabecera %}
+    <br><h2 class="cabecera">Esto es Usuario sin tarea</h2><br>
+{% endblock cabecera %}
+
+{%block contenido%}
         {% for usuarios in usuario_sin %}
             <div>
                 <h2>Usuario: {{usuarios.nombre}}</h2>
@@ -11,8 +12,4 @@
             </div>
         
         {% endfor %}
-
-    </body>
-
-
-</html>
+{%endblock%}

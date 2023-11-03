@@ -1,9 +1,10 @@
-<!DOCTYPE>
-<html>
-    <head>
-        <title>Biblioteca</title>
-    </head>
-    <body>
+{% extends "principal.html" %}
+
+{% block cabecera %}
+    <br><h2 class="cabecera">Comentarios</h2><br>
+{% endblock cabecera %}
+
+{%block contenido%}
 
         <div>
             <h2>autor: {{ultimo_usuario.autor.nombre}}</h2>
@@ -12,7 +13,4 @@
 
         </div>
         
-    </body>
-
-
-</html>
+{%endblock%}

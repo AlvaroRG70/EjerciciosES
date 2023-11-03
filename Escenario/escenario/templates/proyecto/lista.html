@@ -1,9 +1,9 @@
-<!DOCTYPE>
-<html>
-    <head>
-        <title>Biblioteca</title>
-    </head>
-    <body>
+{% extends "principal.html" %}
+
+{% block cabecera %}<br><h2 class="cabecera">Esto es Lista de proyectos</h2><br>{% endblock cabecera %}
+
+
+{%block contenido%}
         <h1>Proyectos</h1>
         {% for proyecto in lista_proyectos %}
             <div>
@@ -24,7 +24,5 @@
         
         {% endfor %}
 
-    </body>
+{%endblock%}
 
-
-</html>

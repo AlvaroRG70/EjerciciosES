@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #d0e3ff;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #7db1ff;
+    color: white;
+    font: caption;
+}
+
+.menu > li {
+    width: 150px;
+    height: 100px;
+    padding-top: 22px;
+    color: #EEEEEE;
+    text-align: center;
+    position: relative;
+    list-style: none;
+}
+
+footer {
+    position: fixed;
+    background-color: #7db1ff;
+    bottom: 0;
+    width: 100%;
+}
+
+.cabecera{
+    text-align: center;
+}

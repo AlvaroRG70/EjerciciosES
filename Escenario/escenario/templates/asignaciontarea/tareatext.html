@@ -1,9 +1,10 @@
-<!DOCTYPE>
-<html>
-    <head>
-        <title>escenario</title>
-    </head>
-    <body>
+{% extends "principal.html" %}
+
+{% block cabecera %}
+    <br><h2 class="cabecera">Esto es Lista de tareas por texto en concreto</h2><br>
+{% endblock cabecera %}
+
+{%block contenido%}
         {% for tarea in dame_tareas_escenario %}
             <div>
                 <h2>Observaciones: {{tarea.observaciones}}</h2>
@@ -12,7 +13,4 @@
             <p>-------------------------------------------------------</p> 
         {% endfor %}
 
-    </body>
-
-
-</html>
+{%endblock%}
