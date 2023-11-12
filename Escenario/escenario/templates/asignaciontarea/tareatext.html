@@ -9,8 +9,11 @@
             <div>
                 <h2>Observaciones: {{tarea.observaciones}}</h2>
                 
-            </div>   
+            </div>
+        
             <p>-------------------------------------------------------</p> 
+        {%empty%}
+            <h1>Lo sentimos no hay tareas</h1>
         {% endfor %}
 
 {%endblock%}

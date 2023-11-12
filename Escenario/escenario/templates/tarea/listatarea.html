@@ -7,22 +7,19 @@
 {%block contenido%}
         {% for tarea in tareas_mostrar %}
             <div>
-                <h2>Título: {{tarea.titulo}}</h2>
-                <h2>Descripcion: {{tarea.descripcion}}</h2>
-                <h2>Prioridad: {{tarea.prioridad}}</h2>
-                <h2>Estado: {{tarea.estadio}}</h2>
-                <h2>Completada: {{tarea.completada}}</h2>
-                <h2>Fecha Creacion: {{tarea.fecha_creacion}}</h2>
-                <h2>Hora vencimiento: {{tarea.hora_vencimiento}}</h2>
+                {%include "tarea/listaadjunta.html"%}
 
                 <h2>Usuarios</h2>
                 <ul>
                     {% for usuario in tarea.usuario.all%}
                         <li>{{usuario.nombre}}</li>
+                    {%empty%}
+                        <h1>Lo sentimos, no hay usuarios</h1>
                     {%endfor%}
                 </ul>
                 
             </div>
-        
+        {%empty%}
+            <h1>Lo sentimos, no hay tareas</h1>
         {% endfor %}
 {%endblock%}

@@ -1,0 +1,14 @@
+<h2>Nombre: {{proyecto.nombre}}</h2>
+<h2>Descripcion: {{proyecto.descripcion}}</h2>
+<h2>Duracion estimada: {{proyecto.duracion_estimada}}</h2>
+<h2>Fecha inicio: {{proyecto.fecha_inicio}}</h2>
+<h2>Fecha fin: {{proyecto.fecha_fin}}</h2>
+<h2>Duracion: {{proyecto.duracion_estimada}}</h2>
+
+{%if proyecto.duracion_estimada > 0.3%}
+    <h2>La duración, que es de {{proyecto.duracion_estimada}} supera los 0.3</h2>
+{%else%}
+    <h2>La duración, que es de {{proyecto.duracion_estimada}} no supera los 0.3</h2>
+{%endif%}
+
+<h2>Usuarios</h2>

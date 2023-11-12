@@ -6,11 +6,7 @@
 
 {%block contenido%}
         {% for etiqueta in etiqueta_tarea %}
-            <div>
-                <h2>Tarea: {{etiqueta.tarea.titulo}}</h2>
-                <h2>Etiqueta: {{etiqueta.etiqueta.nombre}}</h2>
-                <p>-----------------------------------------------</p>
-            </div>
+            {%include "tarea/listaetiquetas.html"%}
         
         {% endfor %}
 {%endblock%}

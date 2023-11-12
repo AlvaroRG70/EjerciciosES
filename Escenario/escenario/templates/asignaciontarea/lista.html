@@ -7,9 +7,7 @@
 {%block contenido%}
         {% for tarea in tarea_fecha %}
             <div>
-                <h2>Observaciones: {{tarea.observaciones}}</h2>
-                <h2>fecha publicacion: {{tarea.fecha_asignacion}}</h2>
-                
+                {%include "asignaciontarea/listaadjunta.html"%}
                 <h2>Usuarios</h2>
                 <ul>
                     {% for usuario in proyecto.usuarios.all%}
